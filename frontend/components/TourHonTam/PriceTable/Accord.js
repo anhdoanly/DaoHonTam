@@ -4,7 +4,7 @@ import React from 'react'
 export default function Accord() {
     return (
         <Box>
-            <Accordion allowToggle>
+            <Accordion defaultIndex={[0]} allowToggle>
                 <AccordionItem
                     mb='4'
                     border='none'

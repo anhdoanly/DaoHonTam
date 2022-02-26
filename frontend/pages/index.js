@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -22,10 +23,10 @@ export default function Home() {
         </p> */}
 
         <div className={styles.grid}>
-          <a href="/tour-hon-tam-nha-trang" className={styles.card}>
+          <Link href="/tour-hon-tam-nha-trang" className={styles.card}>
             <h2>Tour Hòn Tằm &rarr;</h2>
             <p>Tour Đảo Hòn Tằm Nha Trang được tổ chức hàng ngày theo hình thức ghép đoàn, là tour Vip cao cấp di chuyển bằng cano cao tốc.</p>
-          </a>
+          </Link>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h2>Vé Hòn Tằm &rarr;</h2>
