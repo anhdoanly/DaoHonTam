@@ -1,8 +1,9 @@
-import { Box, Button, Flex, Heading, Icon, IconButton, Stack, Text } from '@chakra-ui/react'
+import { AspectRatio, Box, Button, Flex, Heading, Icon, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 import { FaPlay } from 'react-icons/fa'
 
 export default function Video() {
+    const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <Box
             position="relative"
@@ -52,6 +53,7 @@ export default function Video() {
                             boxShadow={'0px 4px 15px rgba(0, 107, 153, 0.25)'}
                             p='10'
                             aria-label='Play Video'
+                            onClick={onOpen}
                         >
                             <Icon as={FaPlay} boxSize='10' color={'#0CD3FF'} />
                         </Box>
@@ -93,6 +95,23 @@ export default function Video() {
                     </Text>
                 </Stack>
             </Flex>
+
+            <Modal closeOnOverlayClick={false} size='xl' isOpen={isOpen} onClose={onClose}>
+                <ModalOverlay />
+                <ModalContent>
+                    <ModalHeader>Video Đảo Hòn Tằm</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody pb={6}>
+                        <AspectRatio ratio={16 / 9}>
+                            <iframe
+                                title='Đảo hòn tằm'
+                                src='https://www.youtube.com/embed/QhBnZ6NPOY0'
+                                allowFullScreen
+                            />
+                        </AspectRatio>
+                    </ModalBody>
+                </ModalContent>
+            </Modal>
         </Box>
     )
 }
