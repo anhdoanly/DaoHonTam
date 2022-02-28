@@ -30,7 +30,7 @@ export default function Testimonial() {
                 </Text>
 
                 <Stack
-                    direction='row'
+                    direction={['column', 'row']}
                     justify='center'
                     align='center'
                     spacing='40px'
@@ -50,7 +50,7 @@ export default function Testimonial() {
                                 fontWeight='normal'
                                 color='gray.600'
                                 lineHeight='5'
-                                maxW='290px'
+                                maxW={['200px' , '290px']}
                             >
                                 Tôi rất hài lòng về sản phẩm dịch vụ của bạn. Hy vọng chúng ta có nhiều cơ hội làm việc với nhau hơn
                             </Text>
@@ -90,7 +90,7 @@ export default function Testimonial() {
                                 fontWeight='normal'
                                 color='gray.600'
                                 lineHeight='5'
-                                maxW='290px'
+                                maxW={['200px' , '290px']}
                             >
                                 Tôi rất hài lòng về sản phẩm dịch vụ của bạn. Hy vọng chúng ta có nhiều cơ hội làm việc với nhau hơn
                             </Text>
@@ -130,7 +130,7 @@ export default function Testimonial() {
                                 fontWeight='normal'
                                 color='gray.600'
                                 lineHeight='5'
-                                maxW='290px'
+                                maxW={['200px' , '290px']}
                             >
                                 Tôi rất hài lòng về sản phẩm dịch vụ của bạn. Hy vọng chúng ta có nhiều cơ hội làm việc với nhau hơn
                             </Text>

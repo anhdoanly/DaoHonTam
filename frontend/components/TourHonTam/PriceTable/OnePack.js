@@ -9,7 +9,7 @@ export default function OnePack() {
             <Container maxW='container.xl'>
                 <Stack
                     spacing={12}
-                    direction='row'
+                    direction={['column', 'row']}
                     justify='center'
                 >
                     <Box

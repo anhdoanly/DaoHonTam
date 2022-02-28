@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Accord() {
     return (
-        <Box>
+        <Box w='100%'>
             <Accordion defaultIndex={[0]} allowToggle>
                 <AccordionItem
                     mb='4'

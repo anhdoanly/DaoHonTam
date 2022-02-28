@@ -10,7 +10,7 @@ export default function Hero() {
         bgSize='cover'
         w='100%'
         minH='930px'
-        pt='330px'
+        pt={['250px', '330px']}
         _after={{
             content: '""',
             position: 'absolute',

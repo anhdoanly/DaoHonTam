@@ -6,6 +6,7 @@ import FormContact from '../../components/TourHonTam/formContact'
 export default function MenuWithForm() {
     return (
         <Box
+            display={['none', 'none', 'none', 'block']}
             mt='80px'
         >
             <Container maxW='container.xl'>

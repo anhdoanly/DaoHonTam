@@ -9,8 +9,8 @@ export default function MultiPacks() {
         >
             <Container maxW='container.xl'>
                 <Stack
-                    spacing={5}
-                    direction='row'
+                    spacing={[12, 5]}
+                    direction={['column', 'row']}
                     justify='center'
                     align='center'
                 >

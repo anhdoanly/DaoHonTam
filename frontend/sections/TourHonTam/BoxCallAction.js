@@ -5,6 +5,7 @@ import { AiOutlinePhone } from 'react-icons/ai'
 export default function BoxCallAction() {
   return (
     <Box
+        display={['none', 'none', 'none', 'block']}
         mt='80px'
     >
         <Container maxW='container.xl'>

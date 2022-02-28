@@ -17,8 +17,9 @@ export default function PriceTableOnePack() {
       >
         <Container maxW='container.xl'>
           <Grid
-            templateColumns='repeat(2, 1fr)'
+            templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)']}
             gap={20}
+            w='100%'
           >
             <Accord />
             <CallBox />

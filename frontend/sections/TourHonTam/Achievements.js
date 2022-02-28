@@ -33,7 +33,7 @@ export default function Achievements() {
                     justifyContent='center'
                     alignItems='center'
                     textAlign='center'
-                    direction='row'
+                    direction={['column', 'row']}
                     zIndex='2'
                     position='relative'
                 >

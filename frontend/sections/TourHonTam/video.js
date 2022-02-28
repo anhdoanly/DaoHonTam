@@ -8,21 +8,22 @@ export default function Video() {
         <Box
             position="relative"
             width="100%"
-            top='-180px'
+            top={['-150px', '-180px']}
         >
             <Flex
+                direction={['column', 'row']}
             >
                 <Flex
                     flex={1}
                     justify='start'
                 >
                     <Box
-                        w='410px'
-                        h='465px'
+                        w={['90%', '410px']}
+                        h={['370px','465px']}
                         bgImage={`url('/images/video-img-01.jpg')`}
-                        position="absolute"
-                        top='150px'
-                        left='0'
+                        position={['relative', 'absolute']}
+                        top={[ '0', '150px']}
+                        left={[ '5', '0']}
                         bgSize='cover'
                         bgRepeat='no-repeat'
                         bgPosition='center'
@@ -39,11 +40,12 @@ export default function Video() {
                         bgRepeat='no-repeat'
                         bgPosition='center'
                         boxShadow='2xl'
+                        display={['none', 'none', 'none', 'block']}
                     />
                     <Box
                         position='absolute'
-                        top='110px'
-                        left='550px'
+                        top={['150px', '110px']}
+                        left={['35%', '550px']}
                         zIndex={2}
                     >
                         <Box
@@ -72,7 +74,8 @@ export default function Video() {
                 <Stack
                     flex={1}
                     spacing={10}
-                    mt='110px'
+                    mt={['50px', '110px']}
+                    px={['1rem', '0']}
                 >
                     <Heading
                         as='h2'

@@ -5,28 +5,30 @@ import { ChatIcon, PhoneIcon } from '@chakra-ui/icons'
 export default function CallBox() {
     return (
         <Box
-            p='40px'
+            px={['20px', '40px']}
+            py={['30px', '40px']}
             bg='white'
             borderRadius='20px'
             boxShadow='2xl'
             borderTop='10px solid #0CD3FF'
+            w='100%'
         >
             <Text
-                fontSize='4xl'
+                fontSize={['3xl', '4xl']}
                 fontWeight='semibold'
                 color='gray.800'
-                mb='50px'
+                mb={['20px', '50px']}
                 textAlign='center'
-                lineHeight='1'
+                lineHeight={['1.2', '1']}
             >
                 Liên hệ ngay với chúng tôi
             </Text>
             <Stack
-                direction='row'
+                direction={['column', 'row']}
                 spacing={4}
                 align='center'
                 justify='center'
-                mb='40px'
+                mb={['20px', '40px']}
             >
                 <Button
                     bgGradient='linear(to-r, #0096C6, #0CD3FF)'
@@ -54,7 +56,7 @@ export default function CallBox() {
                 </Button>
             </Stack>
             <Text
-                fontSize='md'
+                fontSize={['sm', 'md']}
                 fontWeight='normal'
                 color='gray.500'
                 textAlign='center'
@@ -73,7 +75,7 @@ export default function CallBox() {
                 textAlign='center'
             >
                 <Text
-                    fontSize='xl'
+                    fontSize={['md', 'xl']}
                     fontWeight='semibold'
                     lineHeight='1'
                 >

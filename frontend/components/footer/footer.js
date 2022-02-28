@@ -49,7 +49,9 @@ export default function Footer() {
           </Box>
         </Heading>
 
-        <Flex>
+        <Flex
+          direction={['column', 'row']}
+        >
           <Box>
             <Text
               as='h3'
@@ -63,7 +65,7 @@ export default function Footer() {
             <List
               mt='6'
               spacing={4}
-              fontSize='xl'
+              fontSize={['md', 'xl']}
               fontWeight='normal'
               color='gray.900'
             >
@@ -82,7 +84,8 @@ export default function Footer() {
             </List>
           </Box>
           <Box
-            ml='100px'
+            ml={['0', '100px']}
+            mt={['50px', '0']}
           >
             <Text
               as='h3'
@@ -96,7 +99,7 @@ export default function Footer() {
             <List
               mt='6'
               spacing={4}
-              fontSize='xl'
+              fontSize={['md', 'xl']}
               fontWeight='normal'
               color='gray.900'
             >
@@ -113,6 +116,7 @@ export default function Footer() {
           <Spacer />
           <Box
             width='300px'
+            mt={['50px', '0']}
           >
             <Text
               as='h3'
