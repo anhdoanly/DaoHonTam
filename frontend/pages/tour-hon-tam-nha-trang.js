@@ -16,8 +16,8 @@ import data from '../data/tourHonTam'
 export default function TourHonTam() {
   return (
     <>
-      {data.map(item => (
-        <Layout>
+      {data.map((item, index) => (
+        <Layout key={index}>
           <SEO
             title={item.title}
             description={item.description}
