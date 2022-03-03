@@ -1,7 +1,7 @@
 import { Box, Container, Heading, ListItem, Text, UnorderedList } from '@chakra-ui/react'
 import React from 'react'
 
-export default function Schedule() {
+export default function Schedule({ title, detail }) {
     return (
         <Box
             mt='80px'
@@ -16,8 +16,9 @@ export default function Schedule() {
                     textAlign='center'
                     textTransform='uppercase'
                 >
-                    Lịch trình
+                    {title}
                 </Heading>
+
 
                 <Box
                     pl='130px'
@@ -34,7 +35,86 @@ export default function Schedule() {
                         borderColor: 'cyan.400',
                     }}
                 >
-                    <Box
+                    {
+                        detail.map((item, index) => {
+                            return (
+                                <React.Fragment
+                                    key={index}
+                                >
+                                    <Box
+                                        position='relative'
+                                        as='p'
+                                        fontSize='2xl'
+                                        fontWeight='bold'
+                                        color='gray.900'
+                                        mb='20px'
+                                        pt='25px'
+                                        _before={{
+                                            content: '""',
+                                            position: 'absolute',
+                                            top: '-2px',
+                                            left: '-128px',
+                                            bg: 'white',
+                                            w: '90px',
+                                            h: '90px',
+                                            borderRadius: '50%',
+                                            borderStyle: 'dashed',
+                                            borderColor: 'cyan.400',
+                                            borderWidth: '1px',
+                                        }}
+                                    >
+                                        <Box
+                                            as='span'
+                                            position='absolute'
+                                            top='5px'
+                                            left='-121px'
+                                            bg='cyan.400'
+                                            color='white'
+                                            borderRadius='50%'
+                                            w='76px'
+                                            h='76px'
+                                            textAlign='center'
+                                            lineHeight='76px'
+                                        >
+                                            {item.number}
+                                        </Box>
+                                        {item.time}
+                                    </Box>
+                                    <Text
+                                        as='p'
+                                        fontSize='md'
+                                        fontWeight='normal'
+                                        color='gray.700'
+                                        mb='80px'
+                                    >
+                                        {
+                                            item.description.split("\n").map((itemDescription, key) => {
+                                                return (
+                                                    <Text as='span' key={key}>{itemDescription}<br /></Text>
+                                                )
+                                            })
+                                        }
+                                        {/* {
+                                            item.list && (
+                                                <UnorderedList>
+                                                    {
+                                                        item.list.map((itemList, key) => {
+                                                            return (
+                                                                <ListItem key={key}>
+                                                                    {itemList}
+                                                                </ListItem>
+                                                            )
+                                                        })
+                                                    }
+                                                </UnorderedList>
+                                            )
+                                        } */}
+                                    </Text>
+                                </React.Fragment>
+                            )
+                        })
+                    }
+                    {/* <Box
                         position='relative'
                         as='p'
                         fontSize='2xl'
@@ -132,15 +212,15 @@ export default function Schedule() {
                         <Text
                             mb='4'
                         >
-                        Cano di chuyển chở du khách đến với đảo Hòn Tằm. Đến đây du khách sẽ nhận được đồ tắm, khăn cho mình.
-                        <br />
-                        <br />
-                        Sau đó du khách sẽ được xe điện chở đến với khu tắm bùn và hồ bơi vô cực. bạn sẽ trải nghiệm các dịch vụ tại đây. Quý khách nghỉ ngơi và thư giãn tại Khu tắm bùn Hòn Tằm, đạt tiêu chuẩn 4 sao.
-                        <br />
-                        <br />
-                        Với các dịch vụ và tiện ích cao cấp như:
+                            Cano di chuyển chở du khách đến với đảo Hòn Tằm. Đến đây du khách sẽ nhận được đồ tắm, khăn cho mình.
+                            <br />
+                            <br />
+                            Sau đó du khách sẽ được xe điện chở đến với khu tắm bùn và hồ bơi vô cực. bạn sẽ trải nghiệm các dịch vụ tại đây. Quý khách nghỉ ngơi và thư giãn tại Khu tắm bùn Hòn Tằm, đạt tiêu chuẩn 4 sao.
+                            <br />
+                            <br />
+                            Với các dịch vụ và tiện ích cao cấp như:
                         </Text>
-                        
+
                         <UnorderedList>
                             <ListItem>Miễn phí sử dụng khăn, đồ tắm, tủ gửi đồ</ListItem>
                             <ListItem>Quý khách nghỉ ngơi tại chòi lá ,dù nệm, ghế lều</ListItem>
@@ -297,7 +377,7 @@ export default function Schedule() {
                         mb='80px'
                     >
                         Quý khách rời Vịnh Nha Trang. HDV chào tạm biệt quý khách và trả về điểm hẹn.
-                    </Text>
+                    </Text> */}
                 </Box>
             </Container>
         </Box>

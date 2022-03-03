@@ -1,7 +1,7 @@
 import { Box, Container, Text } from '@chakra-ui/react'
 import React from 'react'
 
-export default function Warning() {
+export default function Warning({ title, subTitle, description }) {
     return (
         <Box
             bgImage={`url('/images/bg-warning.jpg')`}
@@ -45,7 +45,7 @@ export default function Warning() {
                         py='2'
                         display={['block', 'initial']}
                     >
-                        Cảnh báo
+                        {title}
                     </Text>
                     <Text
                         as='span'
@@ -54,7 +54,7 @@ export default function Warning() {
                         py='2'
                         display={['block', 'initial']}
                     >
-                        Giả mạo Hòn Tằm để bán dịch vụ
+                        {subTitle}
                     </Text>
                 </Box>
                 <Text
@@ -66,9 +66,13 @@ export default function Warning() {
                     position='relative'
                     zIndex={2}
                 >
-                    Chọn ngay tour hôm nay và bạn sẽ được giảm giá 50%
-                    <br />
-                    và bạn có thể tin tưởng chúng tôi sẽ hỗ trợ trong vòng chưa đầy 24h
+                    {
+                        description.split("\n").map((item, key) => {
+                            return (
+                                <Text as='span' key={key}>{item}<br /></Text>
+                            )
+                        })
+                    }
                 </Text>
             </Container>
         </Box>

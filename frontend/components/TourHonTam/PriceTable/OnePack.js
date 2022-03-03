@@ -1,7 +1,7 @@
 import { Box, Center, Container, Flex, Square, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 
-export default function OnePack() {
+export default function OnePack({ price, childPrice, oldPrice }) {
     return (
         <Box
             mt='45px'
@@ -30,7 +30,7 @@ export default function OnePack() {
                                         lineHeight='1'
                                         mb='45px'
                                     >
-                                        450.000đ
+                                        {childPrice}
                                     </Text>
                                     <Text
                                         color='gray.600'
@@ -73,7 +73,7 @@ export default function OnePack() {
                                         lineHeight='1'
                                         mb='45px'
                                     >
-                                        550.000đ
+                                        {price}
                                     </Text>
                                     <Text
                                         color='white'
@@ -107,7 +107,7 @@ export default function OnePack() {
                                         lineHeight='1'
                                         mb='45px'
                                     >
-                                        510.000đ
+                                        {oldPrice}
                                     </Text>
                                     <Text
                                         color='gray.600'

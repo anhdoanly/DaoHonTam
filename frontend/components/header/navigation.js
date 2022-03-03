@@ -45,6 +45,8 @@ export default function Navigation() {
           </Flex> */}
                     <Flex flex={{ base: 1 }} justify={'start'}>
                         <Text
+                            as='a'
+                            href='/'
                             textAlign={useBreakpointValue('left')}
                             color={'white'}
                             fontSize={{ base: '2xl', md: '3xl' }}
@@ -71,15 +73,23 @@ export default function Navigation() {
 
                         <Button
                             // display={{ base: 'none', md: 'inline-flex' }}
+                            as={'a'}
                             fontSize={{ base: 'sm', md: 'xl' }}
                             fontWeight={600}
                             color={'white'}
                             bg={'rgba(12,94,255,0.33)'}
-                            href={'#'}
+                            href={'tel:0938511948'}
                             leftIcon={<PhoneIcon />}
                             _hover={{
                                 bg: '#0C5EFF',
-                            }}>
+                            }}
+                            _focus={{
+                                outline: 'none',
+                            }}
+                            _active={{
+                                bg: '#0C5EFF',
+                            }}
+                        >
                             Gọi Ngay
                         </Button>
                     </Stack>
@@ -120,19 +130,19 @@ const DesktopNav = () => {
 
 const NAV_ITEMS = [
     {
-      label: 'Giới thiệu',
-      href: '#gioithieu',
+        label: 'Giới thiệu',
+        href: '#gioithieu',
     },
     {
-      label: 'Lịch trình',
-      href: '#lichtrinh',
+        label: 'Lịch trình',
+        href: '#lichtrinh',
     },
     {
-      label: 'Bảng giá',
-      href: '#banggia',
+        label: 'Bảng giá',
+        href: '#banggia',
     },
     {
-      label: 'Thực đơn',
-      href: '#thucdon',
+        label: 'Thực đơn',
+        href: '#thucdon',
     },
-  ];
+];

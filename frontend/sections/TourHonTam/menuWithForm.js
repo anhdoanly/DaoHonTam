@@ -3,7 +3,7 @@ import React from 'react'
 import FoodMenu from '../../components/TourHonTam/FoodMenu'
 import FormContact from '../../components/TourHonTam/formContact'
 
-export default function MenuWithForm() {
+export default function MenuWithForm({ title, description, menu }) {
     return (
         <Box
             display={['none', 'none', 'none', 'block']}
@@ -15,7 +15,11 @@ export default function MenuWithForm() {
                     gap={14}
                 >
                     <GridItem>
-                        <FoodMenu />
+                        <FoodMenu
+                            title={title}
+                            description={description}
+                            menu={menu}
+                        />
                     </GridItem>
                     <GridItem>
                         <FormContact />

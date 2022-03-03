@@ -1,9 +1,11 @@
 import { Box, Button, Container, Heading, Text } from '@chakra-ui/react'
 import React from 'react'
 
-export default function Hero() {
+export default function Hero({ title, description, phone }) {
   return (
     <Box
+        as='section'
+        id='gioithieu'
         position={'relative'}
         top='-100px'
         bgImage={`url('/images/baibien-hontam-bg.jpg')`}
@@ -28,7 +30,7 @@ export default function Hero() {
                 fontWeight='bold'
                 color='white'
             >
-                Đảo Hòn Tằm Nha Trang
+                {title}
             </Heading>
             <Text
                 as='p'
@@ -37,9 +39,11 @@ export default function Hero() {
                 mt='20px'
                 fontWeight={300}
             >
-                Tham quan &amp; khám phá Tour đảo Hòn Tằm Nha Trang hàng ngày
+                {description}
             </Text>
             <Button
+                as='a'
+                href={`tel:${phone}`}
                 size={'lg'}
                 mt='50px'
                 bgGradient={'linear(to-r, #0096C6, #0CD3FF)'}

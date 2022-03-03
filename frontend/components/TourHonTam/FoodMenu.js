@@ -2,7 +2,7 @@ import { Box, Divider, Grid, GridItem, Heading, Icon, Stack, Text } from '@chakr
 import React from 'react'
 import { ImSpoonKnife } from 'react-icons/im'
 
-export default function FoodMenu() {
+export default function FoodMenu({ title, description, menu }) {
     return (
         <Box>
             <Heading
@@ -13,7 +13,7 @@ export default function FoodMenu() {
                 mb='4'
                 transform='uppercase'
             >
-                Thực đơn của Tour
+                {title}
             </Heading>
             <Text
                 fontSize='lg'
@@ -21,13 +21,38 @@ export default function FoodMenu() {
                 color='gray.600'
                 mb='50px'
             >
-                Thực đơn tour có thể thay đổi theo ngày/mùa
+                {description}
             </Text>
             <Grid
                 templateColumns='repeat(2, 1fr)'
                 gap={6}
             >
-                <GridItem
+                {
+                    menu.map((item, index) => {
+                        return (
+                            <GridItem
+                                w='100%'
+                                key={index}
+                            >
+                                <Stack
+                                    spacing={4}
+                                    direction='row'
+                                    align='center'
+                                >
+                                    <Icon as={ImSpoonKnife} w='25px' h='25px' color='cyan.400' />
+                                    <Text
+                                        fontSize='lg'
+                                        fontWeight='normal'
+                                        color='gray.700'
+                                    >
+                                        {item.name}
+                                    </Text>
+                                </Stack>
+                            </GridItem>
+                        )
+                    })
+                }
+                {/* <GridItem
                     w='100%'
                 >
                     <Stack
@@ -196,7 +221,7 @@ export default function FoodMenu() {
                             Trái cây + trà đá
                         </Text>
                     </Stack>
-                </GridItem>
+                </GridItem> */}
             </Grid>
             <Divider
                 my={'40px'}

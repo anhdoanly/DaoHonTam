@@ -6,12 +6,19 @@ import Header from './Header'
 import MultiPacks from './MultiPacks'
 import OnePack from './OnePack'
 
-export default function PriceTableOnePack() {
+export default function PriceTableOnePack({ title, description, price, childPrice, oldPrice, phone1, phone2, zalo, note }) {
   return (
     <>
-      <Header />
-      <OnePack />
-      <MultiPacks />
+      <Header
+        title={title}
+        description={description}
+      />
+      <OnePack 
+        price={price}
+        childPrice={childPrice}
+        oldPrice={oldPrice}
+      />
+      {/* <MultiPacks /> */}
       <Box
         mt='80px'
       >
@@ -21,8 +28,14 @@ export default function PriceTableOnePack() {
             gap={20}
             w='100%'
           >
-            <Accord />
-            <CallBox />
+            <Accord
+              data={note}
+            />
+            <CallBox 
+              phone1={phone1}
+              phone2={phone2}
+              zalo={zalo}
+            />
           </Grid>
         </Container>
 

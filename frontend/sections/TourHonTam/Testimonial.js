@@ -1,7 +1,7 @@
 import { Box, Container, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 
-export default function Testimonial() {
+export default function Testimonial({ title, description, data }) {
     return (
         <Box
             as="section"
@@ -17,7 +17,7 @@ export default function Testimonial() {
                     mb='25px'
                     lineHeight='1'
                 >
-                    15,000+ khách hàng nói về chúng tôi
+                    {title}
                 </Heading>
                 <Text
                     fontSize='lg'
@@ -26,7 +26,7 @@ export default function Testimonial() {
                     textAlign='center'
                     lineHeight='7'
                 >
-                    Chúng tôi nỗ lực mỗi ngày để mang đến cho khách hàng sản phẩm và dịch vụ tốt nhất
+                    {description}
                 </Text>
 
                 <Stack
@@ -36,7 +36,50 @@ export default function Testimonial() {
                     spacing='40px'
                     mt='50px'
                 >
-                    <Box>
+                    {data.map((item, index) => {
+                        return (
+                            <Box key={index}>
+                                <Stack
+                                    direction='row'
+                                    align='center'
+                                    spacing='10px'
+                                >
+                                    <Box>
+                                        <Image src={item.avatar} alt={item.name} boxSize='85px' borderRadius='full' />
+                                    </Box>
+                                    <Text
+                                        fontSize='sm'
+                                        fontWeight='normal'
+                                        color='gray.600'
+                                        lineHeight='5'
+                                        maxW={['200px', '290px']}
+                                    >
+                                        {item.content}
+                                    </Text>
+                                </Stack>
+                                <Text
+                                    fontSize='sm'
+                                    fontWeight='500'
+                                    color='gray.900'
+                                    lineHeight='5'
+                                    mt='4'
+                                >
+                                    {item.name}
+                                </Text>
+                                <Text
+                                    fontSize='12px'
+                                    fontWeight='300'
+                                    color='blue.600'
+                                    lineHeight='16px'
+                                    mt='2'
+                                    fontStyle='italic'
+                                >
+                                    {item.company}
+                                </Text>
+                            </Box>
+                        )
+                    })}
+                    {/* <Box>
                         <Stack
                             direction='row'
                             align='center'
@@ -50,7 +93,7 @@ export default function Testimonial() {
                                 fontWeight='normal'
                                 color='gray.600'
                                 lineHeight='5'
-                                maxW={['200px' , '290px']}
+                                maxW={['200px', '290px']}
                             >
                                 Tôi rất hài lòng về sản phẩm dịch vụ của bạn. Hy vọng chúng ta có nhiều cơ hội làm việc với nhau hơn
                             </Text>
@@ -90,7 +133,7 @@ export default function Testimonial() {
                                 fontWeight='normal'
                                 color='gray.600'
                                 lineHeight='5'
-                                maxW={['200px' , '290px']}
+                                maxW={['200px', '290px']}
                             >
                                 Tôi rất hài lòng về sản phẩm dịch vụ của bạn. Hy vọng chúng ta có nhiều cơ hội làm việc với nhau hơn
                             </Text>
@@ -130,7 +173,7 @@ export default function Testimonial() {
                                 fontWeight='normal'
                                 color='gray.600'
                                 lineHeight='5'
-                                maxW={['200px' , '290px']}
+                                maxW={['200px', '290px']}
                             >
                                 Tôi rất hài lòng về sản phẩm dịch vụ của bạn. Hy vọng chúng ta có nhiều cơ hội làm việc với nhau hơn
                             </Text>
@@ -154,7 +197,7 @@ export default function Testimonial() {
                         >
                             Bảo hiểm Prudential
                         </Text>
-                    </Box>
+                    </Box> */}
                 </Stack>
             </Container>
 

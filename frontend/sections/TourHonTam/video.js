@@ -2,7 +2,7 @@ import { AspectRatio, Box, Button, Flex, Heading, Icon, Modal, ModalBody, ModalC
 import React from 'react'
 import { FaPlay } from 'react-icons/fa'
 
-export default function Video() {
+export default function Video({ title, description, video, image1, image2 }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <Box
@@ -20,7 +20,7 @@ export default function Video() {
                     <Box
                         w={['90%', '410px']}
                         h={['370px','465px']}
-                        bgImage={`url('/images/video-img-01.jpg')`}
+                        bgImage={`url('${image1}')`}
                         position={['relative', 'absolute']}
                         top={[ '0', '150px']}
                         left={[ '5', '0']}
@@ -32,7 +32,7 @@ export default function Video() {
                     <Box
                         w='410px'
                         h='465px'
-                        bgImage={`url('/images/video-img-02.jpg')`}
+                        bgImage={`url('${image2}')`}
                         position="absolute"
                         top='0px'
                         left='200px'
@@ -85,7 +85,7 @@ export default function Video() {
                         color='gray.400'
                         maxW='780px'
                     >
-                        Hãy Cùng Khám Phá Cảnh Đẹp trên Đảo Hòn Tằm
+                        {title}
                     </Heading>
                     <Text
                         as='p'
@@ -94,7 +94,7 @@ export default function Video() {
                         color='gray.600'
                         maxW='780px'
                     >
-                        Tổ hợp nghỉ dưỡng và tham quan của khu du lịch trên đảo Hòn Tằm đáp ứng nhu cầu của nhiều sở thích và mong muốn khác nhau của khách hàng trên khắp thế giới.
+                        {description}
                     </Text>
                 </Stack>
             </Flex>
@@ -107,8 +107,8 @@ export default function Video() {
                     <ModalBody pb={6}>
                         <AspectRatio ratio={16 / 9}>
                             <iframe
-                                title='Đảo hòn tằm'
-                                src='https://www.youtube.com/embed/QhBnZ6NPOY0'
+                                title={title}
+                                src={video}
                                 allowFullScreen
                             />
                         </AspectRatio>

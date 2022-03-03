@@ -1,10 +1,9 @@
 import { Box, Container, Icon, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
-import { FiUserPlus } from 'react-icons/fi'
-import { HiShieldCheck } from 'react-icons/hi'
-import { FaAward } from 'react-icons/fa'
+import CountUp from 'react-countup'
+import VisibilitySensor from 'react-visibility-sensor'
 
-export default function Achievements() {
+export default function Achievements({ data }) {
     return (
         <Box
             mt='80px'
@@ -23,7 +22,7 @@ export default function Achievements() {
                 left: '0',
                 width: '100%',
                 height: '100%',
-                bgColor:'rgba(0,0,0,0.5)',
+                bgColor: 'rgba(0,0,0,0.5)',
                 zIndex: '1'
             }}
         >
@@ -37,18 +36,60 @@ export default function Achievements() {
                     zIndex='2'
                     position='relative'
                 >
-                    <Stack
+                    {
+                        data.map((item, index) => {
+                            return (
+                                <Stack
+                                    spacing={4}
+                                    maxW='460px'
+                                    alignItems='center'
+                                    key={index}
+                                >
+                                    <Icon as={item.icon} w='70px' h='70px' />
+                                    <CountUp end={item.number} duration={2}>
+                                        {({ countUpRef, start }) => (
+                                            <VisibilitySensor onChange={start} delayedCall>
+                                                <Text
+                                                    fontSize='4xl'
+                                                    fontWeight='bold'
+                                                    ref={countUpRef}
+                                                />
+                                            </VisibilitySensor>
+                                        )}
+                                    </CountUp>
+                                    <Text
+                                        fontSize='2xl'
+                                        fontWeight='normal'
+                                    >
+                                        {item.title}
+                                    </Text>
+                                    <Text
+                                        fontSize='16px'
+                                        fontWeight='normal'
+                                    >
+                                        {item.description}
+                                    </Text>
+                                </Stack>
+                            )
+                        })
+                    }
+                    {/* <Stack
                         spacing={4}
                         maxW='460px'
                         alignItems='center'
                     >
                         <Icon as={FiUserPlus} w='70px' h='70px' />
-                        <Text
-                            fontSize='4xl'
-                            fontWeight='bold'
-                        >
-                            3579
-                        </Text>
+                        <CountUp end={3579} duration={2}>
+                            {({ countUpRef, start }) => (
+                                <VisibilitySensor onChange={start} delayedCall>
+                                    <Text
+                                        fontSize='4xl'
+                                        fontWeight='bold'
+                                        ref={countUpRef}
+                                    />
+                                </VisibilitySensor>
+                            )}
+                        </CountUp>
                         <Text
                             fontSize='2xl'
                             fontWeight='normal'
@@ -69,12 +110,18 @@ export default function Achievements() {
                         alignItems='center'
                     >
                         <Icon as={HiShieldCheck} w='70px' h='70px' />
-                        <Text
-                            fontSize='4xl'
-                            fontWeight='bold'
-                        >
-                            461
-                        </Text>
+                        <CountUp end={461} duration={2}>
+                            {({ countUpRef, start }) => (
+                                <VisibilitySensor onChange={start} delayedCall>
+                                    <Text
+                                        fontSize='4xl'
+                                        fontWeight='bold'
+                                        ref={countUpRef}
+                                    />
+                                </VisibilitySensor>
+                            )}
+                        </CountUp>
+                        
                         <Text
                             fontSize='2xl'
                             fontWeight='normal'
@@ -95,12 +142,18 @@ export default function Achievements() {
                         alignItems='center'
                     >
                         <Icon as={FaAward} w='70px' h='70px' />
-                        <Text
-                            fontSize='4xl'
-                            fontWeight='bold'
-                        >
-                            1684
-                        </Text>
+                        <CountUp end={1684} duration={2}>
+                            {({ countUpRef, start }) => (
+                                <VisibilitySensor onChange={start} delayedCall>
+                                    <Text
+                                        fontSize='4xl'
+                                        fontWeight='bold'
+                                        ref={countUpRef}
+                                    />
+                                </VisibilitySensor>
+                            )}
+                        </CountUp>
+                        
                         <Text
                             fontSize='2xl'
                             fontWeight='normal'
@@ -113,7 +166,7 @@ export default function Achievements() {
                         >
                             Mô tả thông tin có giá trị, những điểm nổi bật, lời giới thiệu hấp dẫn về sản phẩm dịch vụ, giúp người xem dễ dàng tìm thấy nội dung.
                         </Text>
-                    </Stack>
+                    </Stack> */}
                 </Stack>
             </Container>
         </Box>

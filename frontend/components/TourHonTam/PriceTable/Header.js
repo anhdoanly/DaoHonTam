@@ -1,7 +1,7 @@
 import { Box, Heading, Text } from '@chakra-ui/react'
 import React from 'react'
 
-export default function Header() {
+export default function Header({ title, description }) {
     return (
         <Box>
             <Heading
@@ -14,7 +14,7 @@ export default function Header() {
                 lineHeight='1'
                 mb='20px'
             >
-                Bảng Giá Tour
+                {title}
             </Heading>
             <Text
                 as='p'
@@ -25,8 +25,7 @@ export default function Header() {
                 maxW='690px'
                 mx='auto'
             >
-                Mô tả tóm tắt nội dung về các loại giá của Tour đang cung cấp. Để khách
-                hàng biết được thông tin dễ dàng
+                {description}
             </Text>
         </Box>
     )

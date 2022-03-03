@@ -2,7 +2,7 @@ import { Box, Button, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import { ChatIcon, PhoneIcon } from '@chakra-ui/icons'
 
-export default function CallBox() {
+export default function CallBox({ phone1, phone2, zalo }) {
     return (
         <Box
             px={['20px', '40px']}
@@ -39,8 +39,10 @@ export default function CallBox() {
                     _active={{ opacity: 0.8 }}
                     _focus={{ outline: 'none' }}
                     leftIcon={<PhoneIcon />}
+                    as='a'
+                    href={`tel:${phone1}`}
                 >
-                    Gọi 0981211948
+                    Gọi {phone1}
                 </Button>
                 <Button
                     bgGradient='linear(to-r, #0096C6, #0CD3FF)'
@@ -51,8 +53,10 @@ export default function CallBox() {
                     _active={{ opacity: 0.8 }}
                     _focus={{ outline: 'none' }}
                     leftIcon={<PhoneIcon />}
+                    as='a'
+                    href={`tel:${phone2}`}
                 >
-                    Gọi 0979853348
+                    Gọi {phone2}
                 </Button>
             </Stack>
             <Text
@@ -87,6 +91,8 @@ export default function CallBox() {
                 textAlign='center'
             >
                 <Button
+                    as='a'
+                    href={`http://zalo.me/${zalo}`}
                     bg='white'
                     color='blue.500'
                     leftIcon={<ChatIcon />}
