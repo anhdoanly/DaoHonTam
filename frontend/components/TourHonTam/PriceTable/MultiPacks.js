@@ -2,7 +2,7 @@ import { Box, Button, Container, Divider, Flex, List, ListIcon, ListItem, Spacer
 import React from 'react'
 import { MdCheckCircle } from 'react-icons/md'
 
-export default function MultiPacks() {
+export default function MultiPacks({ data, phone }) {
     return (
         <Box
             mt='45px'
@@ -14,7 +14,129 @@ export default function MultiPacks() {
                     justify='center'
                     align='center'
                 >
-                    <Box
+                    {
+                        data.map((item, index) => {
+                            return (
+                                <Box
+                                    key={index}
+                                    borderRadius='50px'
+                                    boxShadow='2xl'
+                                    bg={item.bgColor}
+                                    px='6'
+                                    py='10'
+                                    w='330px'
+                                    minH='435px'
+                                    position='relative'
+                                >
+                                    <Text
+                                        fontSize='4xl'
+                                        fontWeight='bold'
+                                        color={item.bgColor == 'white' ? '#00b5d8' : 'white'}
+                                        mb='20px'
+                                        textAlign='center'
+                                        lineHeight='1'
+                                    >
+                                        {item.title}
+                                    </Text>
+                                    <Flex
+                                        mb='20px'
+                                    >
+                                        <Box
+                                            flex='start'
+                                        >
+                                            <Text
+                                                fontSize='lg'
+                                                fontWeight='normal'
+                                                color={item.bgColor == 'white' ? 'cyan.400' : 'white'}
+                                                textAlign='center'
+                                                mb='1'
+                                            >
+                                                Người lớn
+                                            </Text>
+                                            <Text
+                                                fontSize='3xl'
+                                                fontWeight='semibold'
+                                                color={item.bgColor == 'white' ? 'gray.500' : 'yellow.200'}
+                                                textAlign='center'
+                                            >
+                                                {item.priceAdult}
+                                            </Text>
+                                        </Box>
+                                        <Spacer />
+                                        <Box
+                                            flex='end'
+                                        >
+                                            <Text
+                                                fontSize='3xl'
+                                                fontWeight='semibold'
+                                                color={item.bgColor == 'white' ? 'gray.500' : 'yellow.200'}
+                                                textAlign='center'
+                                            >
+                                                {item.priceChild}
+                                            </Text>
+                                            <Text
+                                                fontSize='lg'
+                                                fontWeight='normal'
+                                                color={item.bgColor == 'white' ? 'cyan.400' : 'white'}
+                                                textAlign='center'
+                                                mb='1'
+                                            >
+                                                Trẻ em
+                                            </Text>
+                                        </Box>
+                                    </Flex>
+                                    <Divider
+                                        borderColor='gray.300'
+                                    />
+                                    <List spacing={3} mt='20px' color={item.bgColor == 'white' ? 'gray.900' : 'white'}>
+                                        {
+                                            item.services.map((itemService, key) => {
+                                                return (
+                                                    <ListItem key={key}>
+                                                        <ListIcon as={MdCheckCircle} color='yellow.200' />
+                                                        {itemService.name}
+                                                    </ListItem>
+                                                )
+                                            })
+                                        }
+                                        {/* <ListItem>
+                                            <ListIcon as={MdCheckCircle} color='yellow.200' />
+                                            Ăn trưa
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={MdCheckCircle} color='yellow.200' />
+                                            Cano vận chuyển 2 chiều
+                                        </ListItem> */}
+                                    </List>
+                                    <Box
+                                        position='absolute'
+                                        bottom='-5'
+                                        right='10'
+                                    >
+                                        <Button
+                                            as='a'
+                                            href={`tel:${phone}`}
+                                            size='lg'
+                                            bg='#288dff'
+                                            color='white'
+                                            _hover={{
+                                                bg: 'blue.500',
+                                            }}
+                                            _active={{
+                                                bg: 'blue.500',
+                                            }}
+                                            _focus={{
+                                                boxShadow: 'outline',
+                                            }}
+                                        >
+                                            Đặt ngay
+                                        </Button>
+                                    </Box>
+                                </Box>
+                            )
+                        })
+                    }
+                    {/* <Box
                         borderRadius='50px'
                         boxShadow='2xl'
                         bg='white'
@@ -428,9 +550,9 @@ export default function MultiPacks() {
                                 Đặt ngay
                             </Button>
                         </Box>
-                    </Box>
+                    </Box> */}
                 </Stack>
             </Container>
-        </Box>
+        </Box >
     )
 }

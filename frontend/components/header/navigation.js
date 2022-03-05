@@ -45,8 +45,8 @@ export default function Navigation() {
           </Flex> */}
                     <Flex flex={{ base: 1 }} justify={'start'}>
                         <Text
-                            as='a'
-                            href='/'
+                            // as='a'
+                            // href='/'
                             textAlign={useBreakpointValue('left')}
                             color={'white'}
                             fontSize={{ base: '2xl', md: '3xl' }}

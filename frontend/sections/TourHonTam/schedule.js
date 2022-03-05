@@ -4,6 +4,8 @@ import React from 'react'
 export default function Schedule({ title, detail }) {
     return (
         <Box
+            as='section'
+            id='lichtrinh'
             mt='80px'
         >
             <Container maxW='container.xl'>

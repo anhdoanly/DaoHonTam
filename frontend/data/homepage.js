@@ -138,64 +138,9 @@ export default [
         priceTable: {
             title: 'Bảng giá Tour',
             description: 'Mô tả tóm tắt nội dung về các loại giá của Tour đang cung cấp. Để khách hàng biết được thông tin dễ dàng',
-            priceList: [
-                {
-                    title: 'Gói Tour 1',
-                    priceAdult: '550.000',
-                    priceChild: '385.000',
-                    bgColor: 'white',
-                    services: [
-                        {
-                            name: 'Tắm bùn',
-                        },
-                        {
-                            name: 'Ăn trưa',
-                        },
-                        {
-                            name: 'Cano vận chuyển 2 chiều',
-                        },
-                    ],
-                },
-                {
-                    title: 'Gói Tour 2',
-                    priceAdult: '450.000',
-                    priceChild: '315.000',
-                    bgColor: 'cyan.500',
-                    services: [
-                        {
-                            name: 'Tắm bùn',
-                        },
-                        {
-                            name: 'Ăn trưa',
-                        },
-                    ],
-                },
-                {
-                    title: 'Gói Tour 3',
-                    priceAdult: '350.000',
-                    priceChild: '245.000',
-                    bgColor: 'white',
-                    services: [
-                        {
-                            name: 'Tắm bùn',
-                        },
-                        {
-                            name: 'Cano vận chuyển 2 chiều',
-                        },
-                    ],
-                },
-                {
-                    title: 'Gói Tour 4',
-                    priceAdult: '250.000',
-                    priceChild: '175.000',
-                    bgColor: 'cyan.500',
-                    services: [
-                        {
-                            name: 'Tắm bùn',
-                        },
-                    ],
-                },
-            ],
+            price: '550.000đ',
+            childPrice: '450.000đ',
+            oldPrice: '510.000đ',
             phone1: '0938511948',
             phone2: '0979853348',
             zalo: '0938511948',

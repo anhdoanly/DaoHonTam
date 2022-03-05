@@ -3,14 +3,14 @@ import { HiShieldCheck } from 'react-icons/hi'
 import { FaAward } from 'react-icons/fa'
 export default [
     {
-        title: 'Tour Đảo Hòn Tằm Nha Trang',
-        description: 'Tour Đảo Hòn Tằm Nha Trang',
+        title: 'Vé Hòn Tằm Nha Trang',
+        description: 'Vé Hòn Tằm Nha Trang',
         image: '/images/tour-hon-tam-nha-trang.jpg',
         url: 'https://daohontam.com/tour-hon-tam-nha-trang',
-        keywords: 'Tour Đảo Hòn Tằm Nha Trang',
+        keywords: 'Vé Hòn Tằm Nha Trang',
         price: '500.000đ',
         hero: {
-            title: 'Tour Đảo Hòn Tằm Nha Trang',
+            title: 'Vé Hòn Tằm Nha Trang',
             description: 'Tham quan & khám phá Tour đảo Hòn Tằm Nha Trang hàng ngày',
             phone: '0938511948',
         },
@@ -140,7 +140,7 @@ export default [
             description: 'Mô tả tóm tắt nội dung về các loại giá của Tour đang cung cấp. Để khách hàng biết được thông tin dễ dàng',
             priceList: [
                 {
-                    title: 'Gói Tour 1',
+                    title: 'Giá vé 1',
                     priceAdult: '550.000',
                     priceChild: '385.000',
                     bgColor: 'white',
@@ -157,7 +157,7 @@ export default [
                     ],
                 },
                 {
-                    title: 'Gói Tour 2',
+                    title: 'Giá vé 2',
                     priceAdult: '450.000',
                     priceChild: '315.000',
                     bgColor: 'cyan.500',
@@ -171,7 +171,7 @@ export default [
                     ],
                 },
                 {
-                    title: 'Gói Tour 3',
+                    title: 'Giá vé 3',
                     priceAdult: '350.000',
                     priceChild: '245.000',
                     bgColor: 'white',
@@ -185,7 +185,7 @@ export default [
                     ],
                 },
                 {
-                    title: 'Gói Tour 4',
+                    title: 'Giá vé 4',
                     priceAdult: '250.000',
                     priceChild: '175.000',
                     bgColor: 'cyan.500',

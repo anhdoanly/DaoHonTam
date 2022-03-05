@@ -56,7 +56,7 @@ export default function TourHonTam() {
           <Achievements
             data={item.achievements}
           />
-          <PriceTable
+          {/* <PriceTable
             title={item.priceTable.title}
             description={item.priceTable.description}
             price={item.priceTable.price}
@@ -66,6 +66,16 @@ export default function TourHonTam() {
             phone2={item.priceTable.phone2}
             zalo={item.priceTable.zalo}
             note={item.priceTable.note}
+          /> */}
+          <PriceTable
+            title={item.priceTable.title}
+            description={item.priceTable.description}
+            priceList={item.priceTable.priceList}
+            phone1={item.priceTable.phone1}
+            phone2={item.priceTable.phone2}
+            zalo={item.priceTable.zalo}
+            note={item.priceTable.note}
+            packageNumber='4'
           />
           <Album
             before={item.gallery.before}

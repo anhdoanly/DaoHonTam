@@ -6,6 +6,8 @@ import FormContact from '../../components/TourHonTam/formContact'
 export default function MenuWithForm({ title, description, menu }) {
     return (
         <Box
+            as='section'
+            id='thucdon'
             display={['none', 'none', 'none', 'block']}
             mt='80px'
         >
