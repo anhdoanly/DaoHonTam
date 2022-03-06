@@ -1,11 +1,11 @@
-import { Box, Container, Flex, HStack, Icon, Spacer, Text, VStack } from '@chakra-ui/react'
+import { Box, Container, Flex, HStack, Icon, Spacer, Stack, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 import { AiOutlinePhone } from 'react-icons/ai'
 
 export default function BoxCallAction({ data }) {
     return (
         <Box
-            display={['none', 'none', 'none', 'block']}
+            // display={['none', 'none', 'none', 'block']}
             mt='80px'
         >
             <Container maxW='container.xl'>
@@ -15,8 +15,8 @@ export default function BoxCallAction({ data }) {
                     bgSize='cover'
                     bgRepeat='no-repeat'
                     bgPosition='center'
-                    px='45px'
-                    py='80px'
+                    px={['20px', '45px']}
+                    py={['50px', '80px']}
                     borderRadius='30px'
                     position='relative'
                     zIndex='1'
@@ -36,6 +36,8 @@ export default function BoxCallAction({ data }) {
                         align='center'
                         position='relative'
                         zIndex='3'
+                        direction={['column', 'column', 'column', 'row']}
+                        justify='space-between'
                     >
                         <Box
                             as='p'
@@ -53,9 +55,12 @@ export default function BoxCallAction({ data }) {
                             </Text>
                         </Box>
                         <Spacer />
-                        <Box>
-                            <HStack
+                        <Box
+                            mt={['6', '0']}
+                        >
+                            <Stack
                                 spacing={8}
+                                direction={['column', 'row']}
                             >
                                 {
                                     data.map((item, index) => {
@@ -285,7 +290,7 @@ export default function BoxCallAction({ data }) {
                                         </VStack>
                                     </HStack>
                                 </Box> */}
-                            </HStack>
+                            </Stack>
                         </Box>
                     </Flex>
                 </Box>

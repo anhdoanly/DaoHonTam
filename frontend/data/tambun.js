@@ -85,6 +85,7 @@ export default [
         menu: {
             title: 'Thực đơn của Tour',
             description: 'Thực đơn tour có thể thay đổi theo ngày/mùa',
+            price: '500.000đ',
             list: [
                 {
                     name: 'Salad dầu giấm',

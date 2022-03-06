@@ -51,7 +51,9 @@ export default function TourHonTam() {
           <MenuWithForm
             title={item.menu.title}
             description={item.menu.description}
+            price={item.menu.price}
             menu={item.menu.list}
+            phone={item.callBox}
           />
           <Achievements
             data={item.achievements}

@@ -2,7 +2,7 @@ import { Box, Divider, Grid, GridItem, Heading, Icon, Stack, Text } from '@chakr
 import React from 'react'
 import { ImSpoonKnife } from 'react-icons/im'
 
-export default function FoodMenu({ title, description, menu }) {
+export default function FoodMenu({ title, description, price, menu }) {
     return (
         <Box>
             <Heading
@@ -227,7 +227,9 @@ export default function FoodMenu({ title, description, menu }) {
                 my={'40px'}
                 borderColor='gray.400'
             />
-            <Box>
+            <Box
+                display={['none', 'none', 'none', 'block']}
+            >
                 <Text
                     fontSize={'36px'}
                     fontWeight='light'
@@ -248,7 +250,7 @@ export default function FoodMenu({ title, description, menu }) {
                         color='#288DFF'
                         lineHeight='1'
                     >
-                        500.000đ
+                        {price}
                     </Text>
                     <Box>
                         <Text
