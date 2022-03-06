@@ -44,6 +44,7 @@ export default function FormContact({ data }) {
                                 spacing={[0, 8]}
                                 align='center'
                                 mb='40px'
+                                key={index}
                             >
                                 <Box
                                     w={['0', '180px']}
