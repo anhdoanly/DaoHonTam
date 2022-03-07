@@ -72,13 +72,13 @@ export default [
                 color: 'cyan.400'
             },
             {
-                label: '0938.511.948',
-                value: '0938511948',
+                label: '0981.211.948',
+                value: '0981211948',
                 color: 'red.400'
             },
             {
-                label: '0938.511.948',
-                value: '0938511948',
+                label: '0979.85.3348',
+                value: '0979853348',
                 color: 'pink.400'
             }
         ],
